@@ -16,7 +16,11 @@ Aquí tienes un [vídeo demostrativo](https://oscarm.tinytake.com/tt/NTQwMTg4N18
   - ¿Puedes hacer que dicha variable de estado sea establecida desde un control en la interfaz de usuario?
 
   Adjunto un [vídeo](https://oscarm.tinytake.com/tt/NTQwNDY5MV8xNjkwMzk3Ng) aproximado de esta implementación.
+  
+## Posible implementación de la app con bonus
 
+[PokeAPI Full](https://pokemon-api-two-nu.vercel.app/#)
+  
 ## MEGA-BONUS
 
 - Existe una **biblioteca** para facilitar la comunicación con esta API. Búscala en la documentación de la misma página de la PokeApi y úsala en vez de hacer las llamadas directamente a la API. Tienes la solución a cómo usarla en la carpeta **solution_using_library**
