@@ -16,9 +16,9 @@ Aquí tienes una [DEMO](https://formate-con-altia.github.io/pokeapi-fetch/)
   - ¿Cómo se hace para crear opciones de un control \<select>? [Ayuda](https://www.w3schools.com/jsref/met_select_add.asp)
   - ¿Puedes hacer que dicha variable de estado sea establecida desde un control en la interfaz de usuario?
 
-  Adjunto un [vídeo](https://oscarm.tinytake.com/tt/NTQwNDY5MV8xNjkwMzk3Ng) aproximado de esta implementación.
+  Adjunto un [vídeo](https://oscarm.tinytake.com/df/162eed7/thumbnail?type=attachments&version_no=0&file_version_no=0&thumbnail_size=preview) aproximado de esta implementación.
   
-## Posible implementación de la app con bonus
+## Posible implementación de la app con bonus y un diseño más bonito
 
 [PokeAPI Full](https://pokemon-api-two-nu.vercel.app/#)
   
