@@ -12,7 +12,7 @@
 <body>
     <div class="container mb-3">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top d-none" src="" alt="Card image cap" data-shiny-url="">
+            <img id= "pokePic" class="card-img-top" src="" alt="Card image cap" data-shiny-url="">
             <div class="card-body">
                 <h5 class="card-title" style=" text-transform: capitalize;">Lorepokemon</h5>
                 <a href="#" class="btn btn-success">Change to Shiny</a>
@@ -27,6 +27,8 @@
                 <option value="pikachu">Pikachu</option>
                 <option value="charmander">Charmander</option>
                 <option value="luxio">Luxio</option>
+                <option value="lugia">Lugia</option>
+                <option value="ho-oh">GOAT</option>
             </select>
         </div>
     </div>
@@ -34,6 +36,40 @@
 <script>
     // 1. Cuando cambie el valor del selector, tenemos que detectar que opción hemos escogido. Probad que sois capaces de recuperar el valor seleccionado por el usuario con un console.log
 
+   const selectName = document.querySelector('#select-pokemon');
+   console.dir(selectName);
+
+selectName.addEventListener('change', async function(event){
+    console.log("ha cambiado el valor a: " + selectName.value);
+    console.log("pokemon seleccionado gracias al objeto event: ", event.target.value);
+
+    let pokeSelected = event.target.value;
+
+    console.log("este es el pokeSelected: " + pokeSelected);
+    
+
+
+    let apiUrl = "https://pokeapi.co/api/v2/pokemon";
+    let pokeUrl = apiUrl + "/" + selectName.value;
+
+    console.log(pokeUrl);
+
+    const response = await fetch(pokeUrl);
+
+    const data = await response.json();
+    console.log(data);
+
+    const pokemonSprite = data.sprites.front_default;
+    console.dir(pokemonSprite);
+
+    document.querySelector('.card-title').textContent = selectName.value;
+    document.querySelector('#pokePic').src = pokemonSprite;
+
+    // const response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
+    // console.log("This is response: ");
+    // const data = response.json();
+
+})
     // 2. En función de la opción escogida, 'montaremos' una URL
     // https://pokeapi.co/api/v2/pokemon/pikachu
     // https://pokeapi.co/api/v2/pokemon/luxio
